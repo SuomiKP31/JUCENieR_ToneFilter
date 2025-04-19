@@ -1,14 +1,14 @@
 # JUCENieR_ToneFilter
 A recreation of NieR:Automata's 8-bit tone filters in JUCE. I made this for UVic's CSC575 Music Information Retrieval course. I'll upload my final report later (with my personal information stripped out ofc), in case you are curious about the technical details.
 
-# How to Use
+## How to Use
 You will get two VST3 plugins in the release package. They can be added to the JUCE plugin host (or other DAWs you like but I haven't tested any). Connect the audio player to the tone filter and the tone filter to output, from there, you can try to run your own audio through and see how it sounds. The plugin host is one of the internal demos that is pre-packaged with JUCE itself, so if you want to start developing your own plugin, playing with it in ProJucer might be a good first move.
 
 Both plugins are built and tested with JUCE 8.0.6.
 
 ![image](https://github.com/user-attachments/assets/d639d5f5-afff-4958-ad53-f413e3ba348e)
 
-# What does it do?
+## What does it do?
 It converts the input to a square-wave like harmonics and mix those with the original track, creating a retro game like feel.
 NieR: Automata's lead audio engineer, Masami Ueda, created it originally in Wwise, to act as a transition between the regular soundtrack and its 8-bit version. Sometimes the track does not have an 8-bit version (such as during the Amusement Park boss fight), then this effect will be used to at least created some hint of 8-bit style from the current background music.
 
@@ -16,20 +16,20 @@ The Maister made a recreation in 2019 and experimented with a lot of technical s
 
 The filtered out tones are also visualized in keys.
 
-# Demo
+## Demo
 
 TODO
 
-# SIMD
+## SIMD
 
 I decided to remove my SIMD experiments from the repo when I uploaded it. This is to maintain best readability for educational purposes. (I really struggled when reading Maister's codes)
 If you want to create SIMD, it's not that hard actually, JUCE has a [very nice tutorial](https://juce.com/tutorials/tutorial_simd_register_optimisation/) which is almost exactly what you want to do (run multiple IIR filters in parallel).
 
-# Naming
+## Naming
 
 This project was originally built upon my VST3 mixer. I kept the filters from that project (you'll need to LPF the output a little bit), then built most things from there. So the main C++ class is still named 561Mixer. Just don't get confused. Most of the interesting things should be named conventionally.
 
-# Things to do...
+## Things to do...
 The runtime power adjustments probably need some more work. The thresholds of tone filter outputs are currently hardcoded which is not ideal, it should be adjustable to adapt to energy distributions of different songs.
 
 The same is more or less true for the power lerping, which is used to make the tone output transition smoother. This should scale with BPM, as it doesn't work too well with faster songs. (The faster the song, the faster the tone output should fade).
