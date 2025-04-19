@@ -36,4 +36,12 @@ The same is more or less true for the power lerping, which is used to make the t
 
 As a result, currently this thing only works very well with slow and relatively low energy inputs. I tried on some non-combat NieR:Automata music and it's great, others, no so well.
 
+## Reference
+[The Maister's Blog](https://themaister.net/blog/2019/02/23/recreating-the-tone-filter-from-nierautomata/)
+Great and much better explanation on how to choose poles and zeros for your filter, as well as leveling.
 
+[The Maister's VST Source](https://github.com/Themaister/ToneFilterVST)
+Mostly acted as my code references. The leveling part is pretty much identical (I used their parameters too), but our IIR implementations are different.
+
+[Masame Ueda's blog at Platinum Games](https://www.platinumgames.com/official-blog/article/9581)
+Original materials. A few demos can be seen there, showcasing the original version of this plugin used in game.
