@@ -45,3 +45,10 @@ Mostly acted as my code references. The leveling part is pretty much identical (
 
 [Masame Ueda's blog at Platinum Games](https://www.platinumgames.com/official-blog/article/9581)
 Original materials. A few demos can be seen there, showcasing the original version of this plugin used in game.
+
+## Endorsement
+![image](https://github.com/user-attachments/assets/f58093bb-855c-4096-8aee-c7157f19068e)
+
+My [LinkedIn Post](https://www.linkedin.com/posts/zhixin-fang-131132192_i-tried-to-recreate-masami-ueda-sans-tone-activity-7319486409088593922-mhOo) was endorsed by the original creator, Masami Ueda.
+I'm happy to get recognized by a industry veteran.
+
